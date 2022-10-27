@@ -2,6 +2,10 @@
 mkdir bashTesting
 cd bashTesting
 
+function pause(){
+read -p "$*"
+        }
+
 pip install --upgrade pip
 echo "Charging flux capacitor"
 echo "..."
@@ -24,6 +28,9 @@ cd ..
 echo "Engage git engines"
 git clone https://github.com/paradoxl/STACCBOT.git
 
+echo "TODO: ADD instructions for STACCBOT"
+pause "Press [enter] to continue"
+
 cd STACCBOT
 echo "Installing requirements..."
 pip install -r requirements.txt
@@ -37,6 +44,8 @@ cd plugins
 echo "Engage git engines"
 git clone https://github.com/paradoxl/ctfd-recaptcha-plugin.git
 
+echo "TODO: ADD instructions for recaptcha"
+pause "Press [enter] to continue"
 cd ctfd-recaptcha-plugin
 echo "Installing requirements..."
 pip install -r requirements.txt
@@ -50,12 +59,15 @@ cd themes
 echo "Engage git engines"
 
 git clone https://github.com/hmrserver/CTFd-theme-pixo.git
-
+echo "TODO: ADD instructions for theme"
+pause "Press [enter] to continue"
 
 
 echo "All the bits and bobs are there. Move to the readMe and configure the modules!"
 echo "Notes:"
 echo "ReCaptcha: default recaptcha keys have been preloaded. you will need to create you own"
+echo "TODO: ADD instructions for build"
+pause "Press [enter] to continue"
 echo "building the CTF"
 
 cd ..
